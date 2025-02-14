@@ -1,4 +1,33 @@
-<nav class="container mx-auto p-5 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">SalDevX</h1>
+<nav class="container mx-auto p-5 flex justify-between items-center relative">
+    <!-- Title and Hamburger Icon Container -->
+    <div class="flex items-center space-x-4">
+        <h1 class="text-2xl font-bold">SalDevX</h1>
+        <span class="material-symbols-outlined cursor-pointer" id="menu-icon">stacks</span>
+    </div>
+
+    <!-- Menu Links (initially hidden) -->
+    <div id="menu-links" class="hidden flex-col space-y-4 mt-3 absolute left-0 top-full w-full">
+        <div class="menu-item">
+            <a href="/about" class="text-lg">About</a>
+        </div>
+        <div class="menu-item">
+            <a href="/skills" class="text-lg">Skills</a>
+        </div>
+        <div class="menu-item">
+            <a href="/projects" class="text-lg">Projects</a>
+        </div>
+        <div class="menu-item">
+            <a href="/contact" class="text-lg">Contact</a>
+        </div>
+        <div class="menu-item">
+            <a href="/interests" class="text-lg">Interests</a>
+        </div>
+    </div>
+
+    <!-- Theme Toggle (no change needed here) -->
     {% include theme-toggle.html %}
 </nav>
+
+  
+
+

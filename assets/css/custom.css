@@ -1,0 +1,39 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    cursor: pointer; /* Make the icon clickable */
+}
+
+
+
+
+#menu-links {
+    position: absolute;
+    top: 80%; /* Start just below the header */
+    left: 0;
+    right: 0;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially not interactable */
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Fade in/out effect */
+    transform: translateX(22px); 
+}
+
+#menu-links.show {
+    opacity: 1; /* Show the menu */
+    visibility: visible; /* Make it interactable */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade in */
+}
+
+.menu-item {
+    opacity: 0; /* Start with no visibility */
+    transform: translateY(-10px); /* Start a little above */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#menu-links.show .menu-item {
+    opacity: 1; /* Make the items visible */
+    transform: translateY(0); /* Reset the position */
+}
