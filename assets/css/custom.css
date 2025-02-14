@@ -7,9 +7,6 @@
     cursor: pointer; /* Make the icon clickable */
 }
 
-
-
-
 #menu-links {
     position: absolute;
     top: 80%; /* Start just below the header */
@@ -37,3 +34,20 @@
     opacity: 1; /* Make the items visible */
     transform: translateY(0); /* Reset the position */
 }
+
+
+/* MarkDown */
+pre {
+    background-color: #3a3838;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: flex;
+  }
+  
+  code {
+    font-family: monospace;
+    font-size: 1.1em;
+  }
+  
+/* ----------- */

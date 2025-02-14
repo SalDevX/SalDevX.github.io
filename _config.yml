@@ -72,3 +72,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+kramdown:
+  input: GFM
+  gfm_quirks:
+    - paragraph_end

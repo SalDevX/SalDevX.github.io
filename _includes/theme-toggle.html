@@ -5,42 +5,45 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const toggle = document.getElementById("theme-toggle");
-            if (!toggle) {
-                console.error("Theme toggle button not found!");
-                return;
-            }
-        
-            const body = document.body;
-            const storageKey = "theme";
-        
-            function applyTheme(theme) {
-                if (theme === "light") {
-                    body.classList.add("bg-white", "text-gray-900");
-                    body.classList.remove("bg-gray-900", "text-white");
-                    toggle.classList.add("bg-gray-700", "text-white");
-                    toggle.classList.remove("bg-gray-800");
-                } else {
-                    body.classList.add("bg-gray-900", "text-white");
-                    body.classList.remove("bg-white", "text-gray-900");
-                    toggle.classList.add("bg-gray-800");
-                    toggle.classList.remove("bg-gray-700", "text-white");
-                }
-            }
-        
-            // Get theme from localStorage, default to "dark"
-            let currentTheme = localStorage.getItem(storageKey) || "dark";
-            applyTheme(currentTheme);
-        
-            toggle.addEventListener("click", function () {
-                currentTheme = currentTheme === "light" ? "dark" : "light";
-                applyTheme(currentTheme);
-                localStorage.setItem(storageKey, currentTheme);
-            });
-        
-            console.log("Current theme:", currentTheme);
-        });
+    const toggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const footer = document.getElementById("footer"); // Get the footer
+    const storageKey = "theme";
+    
+    // Function to apply the theme
+    function applyTheme(theme) {
+        if (theme === "light") {
+            body.classList.add("bg-white", "text-gray-900");
+            body.classList.remove("bg-gray-900", "text-white");
+            toggle.classList.add("bg-gray-700", "text-white");
+            toggle.classList.remove("bg-gray-800");
+            footer.classList.add("text-white"); // Keep footer text white
+            footer.classList.remove("text-gray-900"); // Ensure footer text is white in light theme
+        } else {
+            body.classList.add("bg-gray-900", "text-white");
+            body.classList.remove("bg-white", "text-gray-900");
+            toggle.classList.add("bg-gray-800");
+            toggle.classList.remove("bg-gray-700", "text-white");
+            footer.classList.add("text-white"); // Keep footer text white in dark theme
+            footer.classList.remove("text-gray-900"); // Ensure footer text is white in dark theme
+        }
+    }
+
+    // Get theme from localStorage, default to "dark"
+    let currentTheme = localStorage.getItem(storageKey) || "dark";
+    applyTheme(currentTheme);
+
+    toggle.addEventListener("click", function () {
+        currentTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(currentTheme);
+        localStorage.setItem(storageKey, currentTheme);
+    });
+
+    console.log("Current theme:", currentTheme);
+});
+
         </script>
+        
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const menuIcon = document.getElementById('menu-icon');
@@ -69,14 +72,14 @@
                 setTimeout(() => {
                     item.style.opacity = 0; // Fade out each item
                     item.style.transform = 'translateY(-10px)'; // Move up out of view
-                }, (menuItems.length - 1 - i) * 100); // Reverse delay based on index
+                }, (menuItems.length - 1 - i) * 188); // Reverse delay based on index
             }
 
             // After the transition, hide the whole menu
             setTimeout(() => {
                 menuLinks.classList.remove("show");
                 menuLinks.classList.add("hidden");
-            }, menuItems.length * 100); // Delay based on the number of items
+            }, menuItems.length * 188); // Delay based on the number of items
         }
 
         // Toggle the menu visibility
