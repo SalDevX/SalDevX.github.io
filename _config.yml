@@ -58,7 +58,15 @@
 
 
 
+
+
 title: "SalDevX Portfolio"
 description: "My personal portfolio site"
 baseurl: ""
 url: "https://SalDevX.github.io"
+
+
+
+
+plugins:
+  - jekyll-sitemap
