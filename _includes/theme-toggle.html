@@ -1,0 +1,46 @@
+<body>
+    <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded">
+        +
+    </button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById("theme-toggle");
+            if (!toggle) {
+                console.error("Theme toggle button not found!");
+                return;
+            }
+        
+            const body = document.body;
+            const storageKey = "theme";
+        
+            function applyTheme(theme) {
+                if (theme === "light") {
+                    body.classList.add("bg-white", "text-gray-900");
+                    body.classList.remove("bg-gray-900", "text-white");
+                    toggle.classList.add("bg-gray-700", "text-white");
+                    toggle.classList.remove("bg-gray-800");
+                } else {
+                    body.classList.add("bg-gray-900", "text-white");
+                    body.classList.remove("bg-white", "text-gray-900");
+                    toggle.classList.add("bg-gray-800");
+                    toggle.classList.remove("bg-gray-700", "text-white");
+                }
+            }
+        
+            // Get theme from localStorage, default to "dark"
+            let currentTheme = localStorage.getItem(storageKey) || "dark";
+            applyTheme(currentTheme);
+        
+            toggle.addEventListener("click", function () {
+                currentTheme = currentTheme === "light" ? "dark" : "light";
+                applyTheme(currentTheme);
+                localStorage.setItem(storageKey, currentTheme);
+            });
+        
+            console.log("Current theme:", currentTheme);
+        });
+        </script>
+        
+</body>
+
