@@ -15,16 +15,20 @@
   <body class="bg-gray-900 text-white">
     {% include navbar.html %}
     <main class="max-w-[100%] mx-auto">
-      
+      <br></br> 
+      <div class="markdown-body mt-8">
+        <h1>Hello, World! 👋</h1>
+        <p>This is my homepage, built with Jekyll.</p>
+        <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
+    </div>
+    <br></br> <br></br>
+      <div class="slider-container">
+        {% include slider.html %}
+    </div>
+    <br></br>
       <div class="prose prose-invert mx-auto">
             {{ content }}
         </div>
-
-        <div class="slider-container">
-            {% include slider.html %}
-        </div>
-        <br></br>
-
         <script src="/assets/js/slider.js"></script>
         <link rel="stylesheet" href="/assets/css/slider.css">
     </main>

@@ -1,75 +1,100 @@
-/* Reset styles for Markdown content */
+/* Ensure markdown body is always transparent */
 .markdown-body {
-    max-width: 800px; /* Adjust width as needed */
-    margin: 0 auto; /* Center content */
-    padding: 1rem;
-    line-height: 1.6;
-    color: #ddd; /* Light text for dark backgrounds */
-  }
-  
-  /* Code blocks */
-  .markdown-body pre {
-    background-color: #1e1e1e; /* Dark background */
-    color: #f8f8f2; /* Light text */
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem auto; /* Centers block */
-    overflow-x: auto;
-    max-width: 90%; /* Prevents full width */
-  }
-  
-  /* Inline code */
-  .markdown-body code {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ff79c6; /* Nice highlight color */
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  
-  /* Headings */
-  .markdown-body h1, 
-  .markdown-body h2, 
-  .markdown-body h3, 
-  .markdown-body h4, 
-  .markdown-body h5, 
-  .markdown-body h6 {
-    margin: 1rem 0;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  /* Paragraphs */
-  .markdown-body p {
-    margin-bottom: 1rem;
-  }
-  
-  /* Lists */
-  .markdown-body ul, 
-  .markdown-body ol {
-    padding-left: 1.5rem;
-  }
-  
-  /* Links */
-  .markdown-body a {
-    color: #4da6ff;
-    text-decoration: underline;
-  }
-  
-  /* Tables */
-  .markdown-body table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-  }
-  
-  .markdown-body th, 
-  .markdown-body td {
-    border: 1px solid #444;
-    padding: 0.5rem;
-  }
-  
-  .markdown-body th {
-    background-color: #333;
-  }
-  
+  background-color: transparent !important;
+  max-width: 800px; /* Adjust width as needed */
+  margin: 0 auto; /* Center content */
+  padding: 1rem;
+  line-height: 1.6;
+  color: white; /* Default text color (dark mode) */
+}
+
+/* Light mode */
+.light .markdown-body {
+  background-color: rgba(0, 0, 0, 0.924) !important;
+  color: black !important;
+}
+
+/* Headings */
+.markdown-body h1, 
+.markdown-body h2, 
+.markdown-body h3, 
+.markdown-body h4, 
+.markdown-body h5, 
+.markdown-body h6 {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+/* Dark mode headings */
+.dark .markdown-body h1,
+.dark .markdown-body h2,
+.dark .markdown-body h3,
+.dark .markdown-body h4,
+.dark .markdown-body h5,
+.dark .markdown-body h6 {
+  color: white;
+}
+
+/* Light mode headings */
+.light .markdown-body h1,
+.light .markdown-body h2,
+.light .markdown-body h3,
+.light .markdown-body h4,
+.light .markdown-body h5,
+.light .markdown-body h6 {
+  color: black !important;
+}
+
+/* Code blocks */
+.markdown-body pre {
+  background-color: #1e1e1e; /* Dark background */
+  color: #f8f8f2; /* Light text */
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto; /* Centers block */
+  overflow-x: auto;
+  max-width: 90%; /* Prevents full width */
+}
+
+/* Inline code */
+.markdown-body code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ff79c6; /* Nice highlight color */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Paragraphs */
+.markdown-body p {
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.markdown-body ul, 
+.markdown-body ol {
+  padding-left: 1.5rem;
+}
+
+/* Links */
+.markdown-body a {
+  color: #4da6ff;
+  text-decoration: underline;
+}
+
+/* Tables */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown-body th, 
+.markdown-body td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+}
+
+.markdown-body th {
+  background-color: #333;
+}
