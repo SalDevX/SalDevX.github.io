@@ -5,74 +5,71 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const footer = document.getElementById("footer"); // Get the footer
-    const storageKey = "theme";
+            const toggle = document.getElementById("theme-toggle");
+            const body = document.body;
+            const footer = document.getElementById("footer"); // Get the footer
+            const storageKey = "theme";
+            
+            // Function to apply the theme
+            function applyTheme(theme) {
+                const markdownBody = document.querySelector(".markdown-body");
+                const body = document.body;
+                const toggle = document.getElementById("theme-toggle"); // Assuming you have a theme toggle button
     
-// Function to apply the theme
-function applyTheme(theme) {
-    const markdownBody = document.querySelector(".markdown-body");
-    const body = document.body;
-    const toggle = document.getElementById("theme-toggle"); // Assuming you have a theme toggle button
-    const footer = document.querySelector("footer");
-
-    if (!markdownBody) return; // Prevent errors if the element doesn't exist
-
-    if (theme === "light") {
-        // Apply light mode styles
-        body.classList.add("bg-white", "text-gray-900");
-        body.classList.remove("bg-gray-900", "text-white");
-        toggle.classList.add("bg-gray-700", "text-white");
-        toggle.classList.remove("bg-gray-800");
-        footer.classList.add("text-gray-900");
-        footer.classList.remove("text-white");
-
-        // Set markdown text and headings to black
-        markdownBody.classList.remove("text-white");
-        markdownBody.classList.add("text-black");
-
-        markdownBody.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(el => {
-            el.classList.remove("text-white");
-            el.classList.add("text-black");
+                if (!markdownBody) return; // Prevent errors if the element doesn't exist
+    
+                // Always keep the footer text white
+                footer.classList.add("text-white");
+                footer.classList.remove("text-gray-900");
+    
+                if (theme === "light") {
+                    // Apply light mode styles
+                    body.classList.add("bg-white", "text-gray-900");
+                    body.classList.remove("bg-gray-900", "text-white");
+                    toggle.classList.add("bg-gray-700", "text-white");
+                    toggle.classList.remove("bg-gray-800");
+    
+                    // Set markdown text and headings to black
+                    markdownBody.classList.remove("text-white");
+                    markdownBody.classList.add("text-black");
+    
+                    markdownBody.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(el => {
+                        el.classList.remove("text-white");
+                        el.classList.add("text-black");
+                    });
+    
+                } else {
+                    // Apply dark mode styles
+                    body.classList.add("bg-gray-900", "text-white");
+                    body.classList.remove("bg-white", "text-gray-900");
+                    toggle.classList.add("bg-gray-800");
+                    toggle.classList.remove("bg-gray-700", "text-white");
+    
+                    // Set markdown text and headings to white
+                    markdownBody.classList.remove("text-black");
+                    markdownBody.classList.add("text-white");
+    
+                    markdownBody.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(el => {
+                        el.classList.remove("text-black");
+                        el.classList.add("text-white");
+                    });
+                }
+            }
+    
+            // Get theme from localStorage, default to "dark"
+            let currentTheme = localStorage.getItem(storageKey) || "dark";
+            applyTheme(currentTheme);
+    
+            toggle.addEventListener("click", function () {
+                currentTheme = currentTheme === "light" ? "dark" : "light";
+                applyTheme(currentTheme);
+                localStorage.setItem(storageKey, currentTheme);
+            });
+    
+            console.log("Current theme:", currentTheme);
         });
-
-    } else {
-        // Apply dark mode styles
-        body.classList.add("bg-gray-900", "text-white");
-        body.classList.remove("bg-white", "text-gray-900");
-        toggle.classList.add("bg-gray-800");
-        toggle.classList.remove("bg-gray-700", "text-white");
-        footer.classList.add("text-white");
-        footer.classList.remove("text-gray-900");
-
-        // Set markdown text and headings to white
-        markdownBody.classList.remove("text-black");
-        markdownBody.classList.add("text-white");
-
-        markdownBody.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(el => {
-            el.classList.remove("text-black");
-            el.classList.add("text-white");
-        });
-    }
-}
-
-
-
-
-    // Get theme from localStorage, default to "dark"
-    let currentTheme = localStorage.getItem(storageKey) || "dark";
-    applyTheme(currentTheme);
-
-    toggle.addEventListener("click", function () {
-        currentTheme = currentTheme === "light" ? "dark" : "light";
-        applyTheme(currentTheme);
-        localStorage.setItem(storageKey, currentTheme);
-    });
-
-    console.log("Current theme:", currentTheme);
-});
-</script>
+    </script>
+    
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const menuIcon = document.getElementById('menu-icon');
