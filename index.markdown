@@ -13,7 +13,3 @@ title : SalDevX
         </div>
     </div>
 </section>
-
-
-
-
