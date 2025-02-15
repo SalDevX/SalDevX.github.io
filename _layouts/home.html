@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ '/assets/icons/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stacks" />
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     {% seo %}
-    </head>
-      <title>{{ page.title }}</title>
-      <body class="bg-gray-900 text-white">
-        {% include navbar.html %}
-        <main class="container mx-auto p-5">
+  </head>
+  <title>{{ page.title }}</title>
+  <body class="bg-gray-900 text-white">
+    {% include navbar.html %}
+    <main class="max-w-[100%] mx-auto">
+      
+      <div class="prose prose-invert mx-auto">
             {{ content }}
-        </main>
-        {% include footer.html %}
-    </body>
-    </html>
+        </div>
+
+        <div class="slider-container">
+            {% include slider.html %}
+        </div>
+        <br></br>
+
+        <script src="/assets/js/slider.js"></script>
+        <link rel="stylesheet" href="/assets/css/slider.css">
+    </main>
+    {% include footer.html %}
+</body>
+  </html>

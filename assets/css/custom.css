@@ -1,3 +1,11 @@
+
+  h1 {
+    font-size: 1.5rem;
+    margin-block: 0;
+  }
+  
+  
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -9,6 +17,7 @@
 
 #menu-links {
     position: absolute;
+    text-align: ;
     top: 80%; /* Start just below the header */
     left: 0;
     right: 0;
@@ -25,6 +34,9 @@
 }
 
 .menu-item {
+    display: flex;
+    justify-content: ;
+    width: 100%;
     opacity: 0; /* Start with no visibility */
     transform: translateY(-10px); /* Start a little above */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -36,18 +48,3 @@
 }
 
 
-/* MarkDown */
-pre {
-    background-color: #3a3838;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: flex;
-  }
-  
-  code {
-    font-family: monospace;
-    font-size: 1.1em;
-  }
-  
-/* ----------- */

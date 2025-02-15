@@ -1,8 +1,13 @@
-<nav class="container mx-auto p-5 flex justify-between items-center relative">
+<nav class="max-w-[97.6%] mx-auto p-5 flex justify-between items-center relative">
     <!-- Title and Hamburger Icon Container -->
     <div class="flex items-center space-x-4">
-        <h1 class="text-2xl font-bold">SalDevX</h1>
+        <h1 class="text-2xl font-bold">{{ site.title | remove: "SalDevX -" }}</h1>
         <span class="material-symbols-outlined cursor-pointer" id="menu-icon">stacks</span>
+    </div>
+
+     <!-- Centered Title -->
+     <div class="absolute left-1/2 transform -translate-x-1/2">
+        <h1 class="text-2xl font-bold">SalDevX</h1>
     </div>
 
     <!-- Menu Links (initially hidden) -->

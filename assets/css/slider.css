@@ -1,0 +1,53 @@
+.slider-container {
+    max-width: max-content; /* Adjust based on your layout */
+    margin: 0 auto; /* Centers the container */
+    overflow: hidden; /* Prevents content from overflowing */
+/*  padding: 0 20px; /* Optional: Adds some space on the sides */
+clip-path: inset(3px 0 3px 0); /* Cuts 3px from top & bottom */
+
+
+/*    Explanation:
+The mask-image applies a linear gradient fade-out.
+rgba(0,0,0,0) 0% → Fully transparent at the left edge.
+rgba(0,0,0,1) 20% → Fully visible starting a bit inside.
+rgba(0,0,0,1) 80% → Fully visible until near the right edge.
+rgba(0,0,0,0) 100% → Fully transparent at the right edge.
+*/
+
+  
+    /*  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgb(0, 0, 0) 90%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgb(0, 0, 0) 90%, rgba(0,0,0,0) 100%) */
+
+    /*radial-gradient() (Circular Fade) Creates a circular fade effect, useful for spotlight effects */
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%); 
+
+}
+
+.clip-frame {
+    clip-path: inset(3px round 30px); /* Adjust corner radius */
+  }
+  
+
+
+#image-track {
+    display: flex;
+    gap: 4vmin;
+    position: relative;
+    transition: transform 0.2s ease;
+    width: 100%;
+    justify-content: center;
+    user-select: none;
+    will-change: transform;
+
+}
+
+.image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    transition: object-position 0.2s ease, opacity 0.2s ease-in-out;
+}
