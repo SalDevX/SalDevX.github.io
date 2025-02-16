@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ '/assets/icons/favicon.png' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stacks" />
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    {% seo %}
-  </head>
-  <title>{{ page.title }}</title>
-  <body class="bg-gray-900 text-white">
-    {% include navbar.html %}
-    <main class="max-w-[100%] mx-auto">
-      <div class="markdown-body mt-8">
-        <h2>Hello, World! 👋</h2>
-        <p1>This is my homepage, built with Jekyll.</p1>
-        <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
-        <h2>Welcome to My Frontend Developer Portfolio</h2>
-        <hr>
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="{{ '/assets/icons/favicon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=stacks" />
+
+  <script src="/assets/js/menu.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% seo %}
+</head>
+<title>{{ page.title }}</title>
+
+<body class="bg-gray-900 text-white">
+  {% include navbar.html %}
+  <main class="max-w-[100%] mx-auto">
+    <div class="markdown-body mt-8">
+      <h2>Hello, World! 👋</h2>
+      <p1>This is my homepage, built with Jekyll.</p1>
+      <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
+      <h2>Welcome to My Frontend Developer Portfolio</h2>
+      <hr>
+
     </div>
     <br></br>
-      <div class="slider-container">
-        {% include slider.html %}
+    <div class="slider-container">
+      {% include slider.html %}
     </div>
     <br></br>
-   
-        <script src="/assets/js/slider.js"></script>
-        <link rel="stylesheet" href="/assets/css/slider.css">
-        <div class="markdown-body mt-8">
-          {{ content }}
-        </div>
-      </main>
-    {% include footer.html %}
-  </body>
-  </html>
+
+    <script src="/assets/js/slider.js"></script>
+    <link rel="stylesheet" href="/assets/css/slider.css">
+    <div class="markdown-body mt-8">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+
+</html>
