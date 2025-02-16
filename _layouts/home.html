@@ -16,23 +16,25 @@
     {% include navbar.html %}
     <main class="max-w-[100%] mx-auto">
       <div class="markdown-body mt-8">
-        <h1>Hello, World! 👋</h1>
-        <p>This is my homepage, built with Jekyll.</p>
+        <h2>Hello, World! 👋</h2>
+        <p1>This is my homepage, built with Jekyll.</p1>
         <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
-        <h1>Welcome to My Frontend Developer Portfolio</h1>
+        <h2>Welcome to My Frontend Developer Portfolio</h2>
         <hr>
+        
     </div>
     <br></br>
       <div class="slider-container">
         {% include slider.html %}
     </div>
     <br></br>
-      <div class="prose prose-invert mx-auto">
-            {{ content }}
-        </div>
+   
         <script src="/assets/js/slider.js"></script>
         <link rel="stylesheet" href="/assets/css/slider.css">
-    </main>
+        <div class="markdown-body mt-8">
+          {{ content }}
+        </div>
+      </main>
     {% include footer.html %}
   </body>
   </html>
