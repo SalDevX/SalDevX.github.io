@@ -133,8 +133,6 @@ GEM
       google-protobuf (~> 4.29)
     sass-embedded (1.85.0-x86_64-linux-musl)
       google-protobuf (~> 4.29)
-    sassc (2.4.0)
-      ffi (~> 1.9)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
@@ -172,7 +170,6 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   minima (~> 2.5)
-  sassc
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1)

@@ -59,9 +59,6 @@ description: "SalDevX is a frontend developer specializing in Astro, JavaScript,
 author: "Salvatore Pesti"
 url: "https://saldevx.github.io" # Your site URL
 
-sass:
-  sass_dir: _sass
-  style: compressed
 
 plugins:
   - jekyll-sitemap
