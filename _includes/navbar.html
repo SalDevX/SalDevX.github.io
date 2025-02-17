@@ -2,30 +2,22 @@
   <nav class="max-w-[97.6%] mx-auto p-5 flex justify-between items-center relative flex-wrap">
     <!-- Title and Hamburger Icon Container -->
     <div class="flex items-center space-x-4">
-        <h1 class="text-2xl font-bold">{{ site.title }}</h1>
-        <img src="{{ site.baseurl }}/assets/icons/stacks.png" alt="menu icon" class="menu-icon button" />
-   
-
-     <!-- Centered Title -->
-     <div class="absolute left-1/2 transform -translate-x-1/2">
+      <h1 class="text-2xl font-bold">{{ site.title }}</h1>
+      <img src="{{ site.baseurl }}/assets/icons/stacks.png" alt="menu icon" class="menu-icon button" />
+      <!-- Centered Title -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
         <h1 class="text-2xl font-bold">Frontend Developer</h1>
+      </div>
+      <div class="wrapper">
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__list__item"><a href="#">Home</a></li>
+            <li class="menu__list__item"><a href="#">Portfolio</a></li>
+            <li class="menu__list__item"><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  <div class="wrapper">
-    <div class="menu">
-      <ul class="menu__list">
-        <li class="menu__list__item"><a href="#">Home</a></li>
-        <li class="menu__list__item"><a href="#">Portfolio</a></li>
-        <li class="menu__list__item"><a href="#">About</a></li>
-      </ul>
-    </div>
-      
-    </div>
-  
-  </div>
-
-
-  
     <!-- Theme Toggle (no change needed here) -->
     {% include theme-toggle.html %}
   </nav>
-  
