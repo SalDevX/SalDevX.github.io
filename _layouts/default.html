@@ -1,20 +1,27 @@
-<!-- _layouts/default.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/favicon.ico/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="/favicon/ico/favicon-16x16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="/assets/icons/apple-icon.png">
-  <title>{{ page.title }}</title>
+  <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
+  <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% seo %}
+  {% include navbar.html %}
 </head>
+
 <body>
   <header>
-    <h1>{{ page.title }}</h1>
+
+  
   </header>
-  <main>
+  <div class="markdown-body mt-8">
     {{ content }}
-  </main>
+  </div>
 </body>
 </html>

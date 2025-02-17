@@ -5,9 +5,15 @@
 }
     */
 /* Default Light Theme */
+body.light .menu__list__item a {
+  color: rgb(0, 0, 0); /* Black color for links in light theme menu liks*/
+}
+
 body.light {
   background-color: white;
   color: black;
+  height: 100vh; /* Full height */
+  width: 100%;   /* Full width */
 }
 
 body.light .markdown-body {
@@ -28,6 +34,11 @@ body.light .menu-icon {
   fill: black;
 }
 
+/* Light theme hr */
+body.light hr {
+  border-color: rgb(0, 0, 0); /* Black border for the light theme */
+}
+
 /* Dark Theme */
 body.dark {
   background-color: #1a202c; /* Dark background */
@@ -45,3 +56,44 @@ body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark 
 body.dark a {
   color: white;
 }
+
+/*Footer styling */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(31, 41, 55);
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-evenly; /* Ensures equal spacing */
+  align-items: center; /* Aligns icons vertically */
+  gap: 20px; /* Space between icons */
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 24.5px;
+  height: 25px;
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  fill: #ff0; /* Set hover color (yellow) */
+}
+
+.no-extra-space {
+  display: inline-block; /* Ensures only the icon is clickable */
+}
+
+
+
+

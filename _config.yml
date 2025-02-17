@@ -58,7 +58,10 @@ title: "SalDevX"
 description: "SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites."
 author: "Salvatore Pesti"
 url: "https://saldevx.github.io"
+permalink: /:title.html  # Optional: If you want to set the permalink format globally
 
+# Layouts and assets paths (Jekyll can find these automatically)
+# theme: jekyll-theme-cayman
 
 
 plugins:
@@ -76,3 +79,5 @@ kramdown:
   gfm_quirks:
     - paragraph_end
     - no_auto_typographic
+
+
