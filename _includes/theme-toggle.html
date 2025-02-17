@@ -1,87 +1,33 @@
-<body>
-    <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded">
-        +
-    </button>
+    <body class="dark">
+        <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded">+</button>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggle = document.getElementById("theme-toggle");
-            const body = document.body;
-            const footer = document.getElementById("footer"); // Get the footer
-            const storageKey = "theme";
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const storageKey = "theme";
 
-            // Function to apply the theme
-            function applyTheme(theme) {
-                const markdownBody = document.querySelector(".markdown-body");
-                const headingElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-                const linkElements = document.querySelectorAll("a");
-                
-                if (!markdownBody) return; // Prevent errors if the element doesn't exist
+    // Function to apply the theme
+    function applyTheme(theme) {
+        if (theme === "light") {
+            body.classList.add("light");
+            body.classList.remove("dark");
+        } else {
+            body.classList.add("dark");
+            body.classList.remove("light");
+        }
+    }
 
-                // Always keep the footer text white
-                footer.classList.add("text-white");
-                footer.classList.remove("text-gray-900");
+    // Get theme from localStorage, default to "dark"
+    let currentTheme = localStorage.getItem(storageKey) || "dark";
+    applyTheme(currentTheme);
 
-                if (theme === "light") {
-                    // Apply light mode styles (without removing existing body classes)
-                    body.classList.add("bg-white", "text-gray-900");
-                    body.classList.remove("bg-gray-900", "text-white");
+    toggle.addEventListener("click", function () {
+        currentTheme = currentTheme === "light" ? "dark" : "light";
+        applyTheme(currentTheme);
+        localStorage.setItem(storageKey, currentTheme);
+    });
+});
 
-                    toggle.classList.add("bg-gray-700", "text-white");
-                    toggle.classList.remove("bg-gray-800");
-
-                    // Set markdown text and headings to black
-                    markdownBody.classList.remove("text-white");
-                    markdownBody.classList.add("text-black");
-
-                    headingElements.forEach(el => {
-                        el.classList.remove("text-white");
-                        el.classList.add("text-black");
-                    });
-
-                    linkElements.forEach(link => {
-                        link.classList.remove("text-white");
-                        link.classList.add("text-black");
-                    });
-
-                } else {
-                    // Apply dark mode styles (without removing existing body classes)
-                    body.classList.add("bg-gray-900", "text-white");
-                    body.classList.remove("bg-white", "text-gray-900");
-
-                    toggle.classList.add("bg-gray-800");
-                    toggle.classList.remove("bg-gray-700", "text-white");
-
-                    // Set markdown text and headings to white
-                    markdownBody.classList.remove("text-black");
-                    markdownBody.classList.add("text-white");
-
-                    headingElements.forEach(el => {
-                        el.classList.remove("text-black");
-                        el.classList.add("text-white");
-                    });
-
-                    linkElements.forEach(link => {
-                        link.classList.remove("text-black");
-                        link.classList.add("text-white");
-                    });
-                }
-            }
-
-            // Get theme from localStorage, default to "dark"
-            let currentTheme = localStorage.getItem(storageKey) || "dark";
-            applyTheme(currentTheme);
-
-            toggle.addEventListener("click", function () {
-                currentTheme = currentTheme === "light" ? "dark" : "light";
-                applyTheme(currentTheme);
-                localStorage.setItem(storageKey, currentTheme);
-            });
-
-            console.log("Current theme:", currentTheme);
-        });
-    </script>
-</body>
-
-
-   
+        </script>
+    </body>

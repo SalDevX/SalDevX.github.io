@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ '/assets/icons/favicon.png' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-   
-   
-    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
-    <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    {% seo %}
-  </head>
-
-  <title>{{ page.title }}</title>
-  <body class="bg-gray-900 text-white">
-    {% include navbar.html %}
-    <main class="max-w-[100%] mx-auto">
-      <br></br>
-      <div class="markdown-body mt-8">
-        <h2>Hello, World! 👋</h2>
-        <p1>This is my homepage, built with Jekyll.</p1>
-        <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
-        <h2>Welcome to My Frontend Developer Portfolio</h2>
-        <hr>
-        
-    </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
+  <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% seo %}
+</head>
+<title>{{ page.title }}</title>
+<body>
+  {% include navbar.html %}
+  <main class="max-w-[100%] mx-auto">
     <br></br>
-      <div class="slider-container">
-        {% include slider.html %}
+    <div class="markdown-body mt-8">
+      <h2>Hello, World! 👋</h2>
+      <p>This is my homepage, built with Jekyll.</p>
+      <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
+      <h2>Welcome to My Frontend Developer Portfolio</h2>
+      <hr>
     </div>
-    <br></br>
-   
-        <script src="/assets/js/slider.js"></script>
-        <link rel="stylesheet" href="/assets/css/slider.css">
-        <div class="markdown-body mt-8">
-          {{ content }}
-        </div>
-      </main>
-    {% include footer.html %}
-  </body>
-  </html>
+    <br>
+    <div class="slider-container">
+      {% include slider.html %}
+    </div>
+    <br>
+    <script src="/assets/js/slider.js"></script>
+    <link rel="stylesheet" href="/assets/css/slider.css">
+    <div class="markdown-body mt-8">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

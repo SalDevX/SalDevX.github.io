@@ -1,142 +1,47 @@
+/* Theme toggle style 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     cursor: pointer;
-  }
+}
+    */
+/* Default Light Theme */
+body.light {
+  background-color: white;
+  color: black;
+}
 
-  .menu-icon {
-    width: 26px;  /* Adjust the width */
-    height: 26px; /* Adjust the height (optional) */
-    cursor: pointer;
-  }
-
-/* Variables */
-:root {
-    --delay: 0.5s;
-  }
-  
-
-  
-  
-  /* Keyframes */
-  @keyframes drop {
-    from {
-      top: 0px;
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    50% {
-      top: 165px;
-      animation-timing-function: ease-in;
-    }
-    to {
-      top: 100px;
-      animation-timing-function: ease-out;
-    }
-  }
-  
-  /* Styles */
-
-
-element {
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    padding-left: -11px;
-    border-left-width: -8px;
-    margin-left: -628px;
-    margin-top: -27px;
-  }
-
-  body {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .commander {
-    width: 100%;
-    color: #ffffff86;
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-  }
-  .wrapper {
-    position: absolute;
-    width: 65px;
-    height: 147px;
-    margin: 0 auto;
-  }
-  
-  .button {
-    display: flex;
-    position: relative;
-    top: 0;
-    width: 11%;
-    height: 50%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0%;
-    background: #02afff00;
-    z-index: 0;
-  }
-
-
-  .menu {
-    width: 100%;
-  }
-  
-  .menu__list {
-    text-align: center;
-    width: 100%;
-    padding-left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in, visibility 0s linear 1s; /* Delay visibility change */
-  }
-  
-
-
-/* When menu is active, make it visible */
-.menu__list--animate {
-  opacity: 2;
-  visibility: visible;
-  transition: opacity 2s ease-out;
+body.light .markdown-body {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: black !important;
 }
 
 
-
-  .menu__list__item {
-    position: relative;
-    list-style: none;
-    padding-bottom: 5px;
-    top: 0px;
-    opacity: 0;
-  }
-  
-  .menu__list__item a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
-  }
-/* Apply Drop Animation First */
-.menu__list--animate .menu__list__item {
-  animation: drop 0.5s ease-out forwards, fade-in 0.5s ease-in 0.5s forwards;
+body.light h1, body.light h2, body.light h3, body.light h4, body.light h5, body.light h6 {
+  color: black;
 }
 
-/* Stagger the Items for a Smooth Effect */
-.menu__list--animate .menu__list__item:nth-child(2) {
-  animation-delay: 0.2s, 0.8s;
+body.light a {
+  color: rgb(255, 255, 255);
 }
 
-.menu__list--animate .menu__list__item:nth-child(3) {
-  animation-delay: 0.3s, 0.9s;
+body.light .menu-icon {
+  fill: black;
 }
 
-.menu__list--animate .menu__list__item:nth-child(4) {
-  animation-delay: 0.4s, 1s;
+/* Dark Theme */
+body.dark {
+  background-color: #1a202c; /* Dark background */
+  color: white;
+}
+
+body.dark .markdown-body {
+  color: white;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: white;
+}
+
+body.dark a {
+  color: white;
 }
