@@ -1,10 +1,19 @@
 .menu-icon {
-    width: 26px;
-    /* Adjust the width */
-    height: 26px;
-    /* Adjust the height (optional) */
-    cursor: pointer;
-}
+    background: none;            /* Remove any background */
+    border: none;                /* Remove any default border */
+    padding: 0;                  /* Remove padding */
+    display: inline-flex;        /* Flex layout for SVG alignment */
+    align-items: center;         /* Vertically center the SVG */
+    justify-content: center;     /* Horizontally center the SVG */
+    cursor: pointer;            /* Make the button interactive */
+  }
+
+
+  /* Optional: Hover effect for the button */
+.menu-icon:hover {
+    opacity: 0.9;                /* Slightly fade the button on hover */
+  }
+  
 
 
 /* Variables */
@@ -64,23 +73,11 @@ body {
 .wrapper {
     position: absolute;
     width: 65px;
-    height: 147px;
+    height: 195px;
     margin: 0 auto;
 }
 
-.button {
-    display: flex;
-    position: relative;
-    top: 0;
-    width: 11%;
-    height: 50%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0%;
-    background: #02afff00;
-    z-index: 0;
-}
+
 
 
 .menu {
@@ -90,7 +87,7 @@ body {
 .menu__list {
     text-align: center;
     width: 100%;
-    padding-left: 0;
+    padding-left: 10px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in, visibility 0s linear 1s;

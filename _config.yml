@@ -67,6 +67,7 @@ permalink: /:title.html  # Optional: If you want to set the permalink format glo
 plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
+- jekyll-postcss
 
 
 # Markdown settings

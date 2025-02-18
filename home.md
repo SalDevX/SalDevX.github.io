@@ -2,7 +2,7 @@
 layout: "home"
 title: SalDevX
 ---
-
+<div class="w-full h-full">
 <h1 class="text-3xl font-bold text-center">Arch Linux Macbook Pro / Air</h1>
 
 <div class="flex justify-center">
@@ -55,3 +55,4 @@ title: SalDevX
 </svg>
 </a>
 </p>
+</div>

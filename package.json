@@ -1,0 +1,35 @@
+{
+  "name": "saldevx.github.io",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss assets/css/main.css -o assets/css/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalDevX/SalDevX.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalDevX/SalDevX.github.io/issues"
+  },
+  "homepage": "https://github.com/SalDevX/SalDevX.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "postcss-import": "^16.1.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-processor-ignore-front-matter": "^1.0.5"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
+    "postcss-custom-properties": "^14.0.4",
+    "postcss-nested": "^7.0.2",
+    "tailwindcss": "^4.0.6"
+  }
+}
