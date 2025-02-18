@@ -65,8 +65,8 @@ permalink: /:title.html  # Optional: If you want to set the permalink format glo
 
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-seo-tag
 
 
 # Markdown settings
@@ -81,3 +81,6 @@ kramdown:
     - no_auto_typographic
 
 
+include:
+- favicon.ico
+- favico.svg

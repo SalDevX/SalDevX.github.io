@@ -1,5 +1,7 @@
-
-
+Gemfile.lock
+_site
 .jekyll-cache
-
+.jekyll-metadata
 vendor
+.bundle/
+.log
