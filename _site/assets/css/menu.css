@@ -27,6 +27,7 @@
     align-items: center; /* Vertically center the SVG */
     justify-content: center; /* Horizontally center the SVG */
     cursor: pointer; /* Make the button interactive */
+    z-index: 2000; /* Higher than nav */
   }
 
 
@@ -107,7 +108,7 @@
      .menu {
       position: relative;
       top: -24%;
-      left: -742px;
+      left: -443px;
       width: 9%;
       background: rgba(255, 255, 255, 0);
       text-align: center;
