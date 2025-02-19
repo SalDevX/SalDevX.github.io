@@ -105,15 +105,14 @@
      Menu Styles
      ========================== */
      .menu {
-        position: absolute;
-        top: -95%;
-        left: 0;
-        width: 8%;
-        background: rgba(255, 255, 255, 0);
-        text-align: center;
-        z-index: 10;
-      }
-    
+      position: relative;
+      top: -24%;
+      left: -742px;
+      width: 9%;
+      background: rgba(255, 255, 255, 0);
+      text-align: center;
+      z-index: 10;
+    }
     /*______________________________________________________________________________________
     /* Ensure menu is hidden by default */
     .menu__list {
@@ -216,3 +215,9 @@ body.light .menu__list__item a {
     color: white;
   }
   
+
+
+
+
+
+

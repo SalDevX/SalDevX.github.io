@@ -85,3 +85,4 @@ highlighter: rouge
 include:
 - favicon.ico
 - favico.svg
+- home.md

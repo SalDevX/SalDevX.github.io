@@ -1,5 +1,5 @@
 ---
-layout: "contact"
+layout: contact
 title: Contact
 ---
 
