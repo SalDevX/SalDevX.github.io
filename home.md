@@ -2,19 +2,18 @@
 layout: "home"
 title: SalDevX
 ---
-<div class="w-full h-full">
+
+<div style="text-align: center;">
 <h1 class="text-3xl font-bold text-center">Arch Linux Macbook Pro / Air</h1>
 
-<div class="flex justify-center">
-  <a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT" class="p-5 bg-gray-800 text-white rounded-lg text-center" style="text-decoration: none;">
-    GitHub Repository
-  </a>
-</div>
+<a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT" class="github-btn" style="text-decoration: none;">
+  GitHub Repository
+</a>
 
 
-<h1 class="text-3xl font-bold text-center">🫴✨ Custom Arch Linux ISO with BCM4360 Support 🧙</h1>
+<h1>🫴✨ Custom Arch Linux ISO with BCM4360 Support 🧙</h1>
 
-<p align="center">
+<p>
     <a href="https://drive.google.com/uc?export=download&id=1T7eOPBnpQysCpjo_9NMvmkim7hK84Oin" class="no-extra-space">
        <svg
    class="spin-svg"    

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
@@ -13,16 +14,18 @@
   <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
   <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-  <link href="assets/css/output.css" rel="stylesheet">
+
+
+ 
 
   {% seo %}
 </head>
 <title>{{ page.title }}</title>
 <body>
   {% include navbar.html %}
-  <main class="max-w-[100%] mx-auto">
+  <main class="main">
     <br></br>
-    <div class="markdown-body mt-8">
+    <div class="markdown-body">
       <h2>Hello, World! 👋</h2>
       <p>This is my homepage, built with Jekyll.</p>
       <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
@@ -36,7 +39,7 @@
     <br>
     <script src="/assets/js/slider.js"></script>
     <link rel="stylesheet" href="/assets/css/slider.css">
-    <div class="markdown-body mt-8">
+    <div class="markdown-body">
       {{ content }}
     </div>
 

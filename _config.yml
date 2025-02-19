@@ -67,19 +67,19 @@ permalink: /:title.html  # Optional: If you want to set the permalink format glo
 plugins:
 - jekyll-sitemap
 - jekyll-seo-tag
-- jekyll-postcss
+
 
 
 # Markdown settings
 markdown: kramdown
 highlighter: rouge
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  gfm_quirks:
-    - paragraph_end
-    - no_auto_typographic
+#kramdown:
+ # input: GFM
+ # syntax_highlighter: rouge
+ # gfm_quirks:
+ # - paragraph_end
+# - no_auto_typographic
 
 
 include:

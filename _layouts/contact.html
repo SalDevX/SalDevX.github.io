@@ -8,12 +8,14 @@
     <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
     <link href="assets/css/output.css" rel="stylesheet">
     <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-    <link href="assets/css/output.css" rel="stylesheet">
+  
+    <title>Contact - SalDevX</title>
   
     {% seo %}
   </head>
@@ -34,9 +36,7 @@
         
           
           <!-- Centered Title -->
-          <div class="absolute left-1/2 transform -translate-x-1/2">
-            <h1 class="text-3xl font-bold">About</h1>
-          </div>
+       
           <div class="wrapper">
             <div class="menu">
               <ul class="menu__list">
@@ -57,5 +57,8 @@
   <div class="markdown-body mt-8">
     {{ content }}
   </div>
+</p>
+</main>
+{% include footer.html %}
 </body>
 </html>

@@ -1,20 +1,19 @@
 /* Ensure markdown body is always transparent */
 
 body {
-  display: flow-root;
+  display: flex;
   justify-content: center;   /* Horizontally center */
   align-items: center;       /* Vertically center */
   height: 100vh;             /* Full height */
   margin: 0;                 /* Remove default body margin */
 }
 
-
 .markdown-body {
   
   background-color: transparent !important;
   max-width: 800px;
   /* Adjust width as needed */
-  margin: 0 auto;
+  margin: 100px auto;
   /* Center content */
   padding: 1rem;
   line-height: 1.6;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/menu.css">
     <link rel="stylesheet" href="/assets/css/markdown.css">
+    <link href="assets/css/output.css" rel="stylesheet">
     <script src="/assets/js/menu.js" defer></script>
     <link href="assets/css/output.css" rel="stylesheet">
   
@@ -71,50 +72,31 @@
   <header>
   </header>
   <div class="markdown-body mt-8">
-    <p>The <code class="language-plaintext highlighter-rouge">display: flow-root;</code> property is a relatively newer value in CSS, and it has an interesting effect on the layout of a container. Here’s a breakdown of what it does:</p>
-
-<h3 id="display-flow-root"><code class="language-plaintext highlighter-rouge">display: flow-root;</code></h3>
-<ul>
-  <li>
-    <p><strong>Creates a new block formatting context (BFC)</strong>: When you set <code class="language-plaintext highlighter-rouge">display: flow-root</code> on an element, it establishes a <strong>block formatting context</strong> (BFC). A BFC is a part of the visual rendering of a web page and affects how elements interact with each other in the layout.</p>
-  </li>
-  <li>
-    <p><strong>Clears floated elements</strong>: One of the key behaviors of a BFC is that it <strong>contains floats</strong> within the element. Normally, when you float elements inside a container, the container might collapse or not “contain” the floats. By setting <code class="language-plaintext highlighter-rouge">display: flow-root</code>, the container will automatically clear any floats inside it, meaning the container will grow to accommodate the floated elements.</p>
-  </li>
-  <li>
-    <p><strong>Normal flow behavior with block-level behavior</strong>: Elements inside a <code class="language-plaintext highlighter-rouge">flow-root</code> behave as if they are in a normal block-level layout, but with the added benefit of float containment and other BFC-related properties.</p>
-  </li>
-</ul>
-
-<h3 id="practical-example">Practical Example:</h3>
-<p>Consider the following scenario:</p>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">flow-root</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.floated-item</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<p>Without <code class="language-plaintext highlighter-rouge">display: flow-root</code>, the <code class="language-plaintext highlighter-rouge">.container</code> might collapse in height if there are floated elements inside it. With <code class="language-plaintext highlighter-rouge">display: flow-root</code>, the <code class="language-plaintext highlighter-rouge">.container</code> will automatically expand to contain the floated <code class="language-plaintext highlighter-rouge">.floated-item</code>, even though it’s floating.</p>
-
-<h3 id="why-use-flow-root">Why Use <code class="language-plaintext highlighter-rouge">flow-root</code>?</h3>
-<ul>
-  <li>It’s a simple way to clear floats without having to manually add a clearfix.</li>
-  <li>It provides better control over how elements are laid out within the container and ensures that floated children do not affect the layout of the parent container.</li>
-</ul>
-
-<h3 id="your-usage">Your Usage:</h3>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span><span class="nc">.dark</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">flow-root</span><span class="p">;</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1a202c</span><span class="p">;</span> <span class="c">/* Dark background */</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>In this case, the <code class="language-plaintext highlighter-rouge">body.dark</code> element will behave like a normal block-level element, but with the added benefit of automatically clearing any floats inside it. It also helps ensure that the content will stay within the body and not overflow when there are floated child elements.</p>
-
-<p>Let me know if you need further clarification!</p>
+    <h1 id="it-all-started-because-a-wi-fi-device-issue">It <strong>all started because a Wi-Fi device issue</strong></h1>
+<div>
+<h2>Project Overview</h2>
+            <p>This webpage project was created from scratch, manually coded in HTML, CSS, and JavaScript, and is hosted on GitHub. Its purpose is to showcase a structured approach to building a basic website without using website builders or GUI editors. It serves as a practical example for learning and understanding web development fundamentals.</p>
+            <h2>Purpose and Goals</h2>
+            <p>The main goals of this project include:
+                <ul>
+                    <li>Demonstrating how to structure a website using HTML and CSS.</li>
+                    <li>Implementing interactivity through JavaScript for special effects.</li>
+                    <li>Hosting on GitHub to provide open-source access for educational purposes.</li>
+                </ul>
+            </p>
+            <h2>Technologies Used</h2>
+            <p>This project incorporates the following technologies:
+                <ul>
+                    <li><strong>HTML</strong>: For content structure and layout.</li>
+                    <li><strong>CSS</strong>: For styling, including responsive design and animations.</li>
+                    <li><strong>JavaScript</strong>: For interactive features, animations, and effects.</li>
+                     <li><strong>NeoVim with NVChad</strong>: A streamlined and customizable text editor setup.</li>
+                    <li><strong>GitHub</strong>: For version control and project hosting.</li>
+                </ul>
+            </p>
+            <h2>About the Developer</h2>
+            <p>This project was created as a personal initiative to explore and improve my skills in web development. Through this project, I aimed to gain hands-on experience with coding, debugging, and understanding the nuances of creating a webpage from the ground up.</p>
+</div>
 
   </div>
 </body>

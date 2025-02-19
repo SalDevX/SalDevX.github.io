@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const menuToggle = document.getElementById("menu-toggle"); // Your menu button
+    const toggle = document.getElementById("theme-toggle");
     const body = document.body;
-    const menu = document.getElementById("menu"); // Your menu container
     const storageKey = "theme";
 
     // Function to apply the theme
@@ -20,15 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentTheme = localStorage.getItem(storageKey) || "dark";
     applyTheme(currentTheme);
 
-    // Theme toggle button event
-    themeToggle.addEventListener("click", function () {
+    toggle.addEventListener("click", function () {
         currentTheme = currentTheme === "light" ? "dark" : "light";
         applyTheme(currentTheme);
         localStorage.setItem(storageKey, currentTheme);
     });
-
-    // Menu toggle button event
-    menuToggle.addEventListener("click", function () {
-        menu.classList.toggle("menu-open"); // Toggle menu visibility
-    });
 });
+
+

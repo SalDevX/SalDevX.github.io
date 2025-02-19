@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
   <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
-  <link rel="stylesheet" href="/assets/css/main.css">
+
   <link rel="stylesheet" href="/assets/css/menu.css">
   <link rel="stylesheet" href="/assets/css/markdown.css">
   <script src="/assets/js/menu.js" defer></script>
@@ -36,37 +36,44 @@
 <title></title>
 <body>
   <nav>
-  <nav class="max-w-[97.6%] mx-auto p-5 flex justify-between items-center relative flex-wrap">
-    <!-- Title and Hamburger Icon Container -->
-    <div class="flex items-center space-x-4">
-      <h1 class="text-2xl font-bold ">SalDevX</h1>
-   
-      <button id="menu-toggle" class="menu-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
-          <path d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" />
-        </svg>
-      </button>
-    
-    
-      
-      <!-- Centered Title -->
-      <div class="absolute left-1/2 transform -translate-x-1/2">
-        <h1 class="text-3xl font-bold">Frontend Developer</h1>
-      </div>
-      <div class="wrapper">
-        <div class="menu">
-          <ul class="menu__list">
-            <li class="menu__list__item"><a href="/home.html">Home</a></li>
-            <li class="menu__list__item"><a href="/about.html">About</a></li>
-            <li class="menu__list__item"><a href="/contacts.html"></a>Contacts</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- Theme Toggle (no change needed here) -->
-    <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded">+</button>
-    <script src="assets/js/theme-toggle.js"></script>
-  </nav>
+<div class="nav-left">
+  <h1 class="site-title">SalDevX</h1>
+
+  <button id="menu-toggle" class="menu-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+      <path
+        d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" />
+    </svg>
+  </button>
+</div>
+
+  <div class="menu">
+    <ul class="menu__list">
+      <li class="menu__list__item"><a href="/home.html">Home</a></li>
+      <li class="menu__list__item"><a href="/about.html">About</a></li>
+      <li class="menu__list__item"><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+
+<div class="nav-center">
+  <h1 class="page-title">Frontend Developer</h1>
+</div>
+
+<!-- Theme Toggle (no change needed here) -->
+<div class="nav-right">
+  <button id="theme-toggle" class="theme-toggle">+</button>
+  <script src="/assets/js/theme-toggle.js"></script>
+</div>
+</nav>
+
+
+
+
+
+
+  
+
   <main class="max-w-[100%] mx-auto">
     <br></br>
     <div class="markdown-body mt-8">
@@ -76,7 +83,68 @@
       <h2>Welcome to My Frontend Developer Portfolio</h2>
       <hr>
     </div>
+    <br>
+    <div class="slider-container">
+      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <img class="image clip-frame"
+    src="/assets/images/Bali.jpg"
+    srcset="/assets/images/Bali-400w.jpg 400w, /assets/images/Bali-800w.jpg 800w, /assets/images/Bali-1200w.jpg 1200w"
+    sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+    draggable="false" />
+    <img class="image clip-frame" 
+         src="/assets/images/Thailand.jpg" 
+         alt="Thailand"
+         srcset="/assets/images/Thailand-400w.jpg 400w,
+                 /assets/images/Thailand-800w.jpg 800w,
+                 /assets/images/Thailand-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px" 
+         draggable="false" />
+    <img class="image clip-frame" 
+         src="/assets/images/Fiji.jpg" 
+         alt="Fiji"
+         srcset="/assets/images/Fiji-400w.jpg 400w,
+                 /assets/images/Fiji-800w.jpg 800w,
+                 /assets/images/Fiji-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px" 
+         draggable="false" />
+    <img class="image clip-frame" 
+         src="/assets/images/Sumba.jpg" 
+         alt="Sumba"
+         srcset="/assets/images/Sumba-400w.jpg 400w,
+                 /assets/images/Sumba-800w.jpg 800w,
+                 /assets/images/Sumba-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px" 
+         draggable="false" />
+    <img class="image clip-frame" 
+         src="/assets/images/Tulum.jpg" 
+         alt="Tulum"
+         srcset="/assets/images/Tulum-400w.jpg 400w,
+                 /assets/images/Tulum-800w.jpg 800w,
+                 /assets/images/Tulum-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px" 
+         draggable="false" />
+    <img class="image clip-frame" 
+         src="/assets/images/Hawaii.jpg" 
+         alt="Hawaii"
+         srcset="/assets/images/Hawaii-400w.jpg 400w,
+                 /assets/images/Hawaii-800w.jpg 800w,
+                 /assets/images/Hawaii-1200w.jpg 1200w"
+         sizes="(max-width: 600px) 400px,
+                (max-width: 1200px) 800px,
+                1200px" 
+         draggable="false" />
+</div>
 
+    </div>
+    <br>
     <script src="/assets/js/slider.js"></script>
     <link rel="stylesheet" href="/assets/css/slider.css">
     <div class="markdown-body mt-8">

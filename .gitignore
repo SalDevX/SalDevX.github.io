@@ -2,7 +2,7 @@
 Gemfile.lock
 
 # Ignore Jekyll build and cache files
-#_site/
+_site/
 .jekyll-cache/
 .jekyll-metadata/
 
