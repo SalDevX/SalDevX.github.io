@@ -6,7 +6,7 @@ title: SalDevX
 <div style="text-align: center;">
 <h1 class="text-3xl font-bold text-center">Arch Linux Macbook Pro / Air</h1>
 
-<a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT" class="github-btn" style="text-decoration: none;">
+<a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT" class="github-btn no-decoration" style="text-decoration: none;">
   GitHub Repository
 </a>
 
@@ -55,3 +55,8 @@ title: SalDevX
 </a>
 </p>
 </div>
+
+
+
+# This web page layout is built from the ground up using only vanilla CSS for styling, java script for drop down menu animation, theme switch toggle and gallery slider. 
+### **You can vist the the site repository at** <a href="https://github.com/SalDevX/SalDevX.github.io" class="github-btn no-decoration">github.com/SalDevX/SalDevX.github.io</a> to verify the structure and funsionality. 

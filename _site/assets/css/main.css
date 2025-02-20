@@ -270,12 +270,32 @@ nav {
       font-size: 16px;
       font-weight: bold;
       text-align: center;
-      text-decoration: none; !important;
-      border-radius: 8px;
+      border-radius: 23px;
       transition: background 0.3s ease-in-out;
     }
     
     .github-btn:hover {
       background-color: #333;
+    }
+  
+    body.light .github-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #24292e; /* GitHub's dark color */
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 23px;
+      transition: background 0.3s ease-in-out;
+    }
+    
+    body.light .github-btn:hover { 
+      background-color: #5a5a5a;
+    }
+   
+    a.no-decoration {
+      text-decoration: none !important;
+      color: white;
     }
     

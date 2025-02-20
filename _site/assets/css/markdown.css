@@ -15,7 +15,7 @@ body {
   /* Adjust width as needed */
   margin: 100px auto;
   /* Center content */
-  padding: 1rem;
+  padding: 0rem;
   line-height: 1.6;
   color: white;
   /* Default text color (dark mode) */
@@ -98,8 +98,13 @@ body {
 /* Lists */
 .markdown-body ul,
 .markdown-body ol {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem; /* Indentation for list items */
+  margin: 1em 0; /* Space before and after lists */
+  list-style-position: outside; /* Marker position: 'inside' or 'outside' */
+  list-style-type: disc; /* Default bullet type for <ul>: disc, circle, square */
+  color: inherit; /* Inherit text color from parent */
 }
+
 
 /* Links */
 .markdown-body a {

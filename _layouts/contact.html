@@ -1,64 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
-
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
-    <link href="assets/css/output.css" rel="stylesheet">
-    <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-  
-    <title>Contact - SalDevX</title>
-  
-    {% seo %}
-  </head>
-  <title>{{ page.title }}</title>
-  <body>
-    <nav>
-      <nav class="max-w-[97.6%] mx-auto p-5 flex justify-between items-center relative flex-wrap">
-        <!-- Title and Hamburger Icon Container -->
-        <div class="flex items-center space-x-4">
-          <h1 class="text-2xl font-bold ">{{ site.title }}</h1>
-       
-          <button id="menu-toggle" class="menu-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
-              <path d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" />
-            </svg>
-          </button>
-        
-        
-          
-          <!-- Centered Title -->
-       
-          <div class="wrapper">
-            <div class="menu">
-              <ul class="menu__list">
-                <li class="menu__list__item"><a href="/home.html">Home</a></li>
-                <li class="menu__list__item"><a href="/about.html">About</a></li>
-                <li class="menu__list__item"><a href="/contacts.html"></a>Contacts</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Theme Toggle (no change needed here) -->
-        <button id="theme-toggle" class="bg-gray-800 text-white p-2 rounded">+</button>
-        <script src="assets/js/theme-toggle.js"></script>
-      </nav>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+  <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+  <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
+  {% seo %}
+</head>
+<title>{{ page.title }}</title>
 <body>
-  <header>
-  </header>
-  <div class="markdown-body mt-8">
-    {{ content }}
-  </div>
-</p>
-</main>
-{% include footer.html %}
+
+  <main class="main">
+    {% include navbar.html %}
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    </main>
+    <div>
+      {{ content }}
+      
+    </div>
+
+  {% include footer.html %}
 </body>
 </html>
