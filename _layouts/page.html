@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
   <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
-
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/test.css' | relative_url }}">
   <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   {% seo %}
 </head>
 <title>{{ page.title }}</title>
-<body>
-  {% include navbar.html %}
-  <main class="max-w-[100%] mx-auto">
-    <br></br>
-    <div class="markdown-body mt-8">
-      <h2>Hello, World! 👋</h2>
-      <p>This is my homepage, built with Jekyll.</p>
-      <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
-      <h2>Welcome to My Frontend Developer Portfolio</h2>
-      <hr>
-    </div>
-    <br>
-    <div class="slider-container">
-      {% include slider.html %}
-    </div>
-    <br>
-    <script src="/assets/js/slider.js"></script>
-    <link rel="stylesheet" href="/assets/css/slider.css">
-    <div class="markdown-body mt-8">
+<body></body>
+  <div class="arch-shape"></div>
+  <main class="main">
+    {% include navbar.html %}    
+    <div class="markdown-body">
       {{ content }}
     </div>
-
-  </p>
   </main>
-  {% include footer.html %}
 </body>
 </html>

@@ -9,22 +9,21 @@
   <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
   <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
   <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/menu.css">
   <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
   {% seo %}
 </head>
 <title>{{ page.title }}</title>
 <body>
-
+  <div class="arch-shape"></div>
   <main class="main">
     {% include navbar.html %}
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/menu.css">
+
     </main>
     <div>
       {{ content }}
-      
     </div>
-
   {% include footer.html %}
 </body>
 </html>

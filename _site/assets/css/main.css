@@ -25,7 +25,57 @@
     padding-top: 60px; /* Match the height of the nav */
     box-sizing: border-box; /* Helps with consistent box sizing */
   }
+
+ 
+ /*=====================================
+ +++++++++++++++++++++++++++++++++++++++
+ =======================================
+ ARCH SHAPE BACKGROUND
+ +++++++++++++++++++++++++++++++++++++++
+ =======================================
+ +++++++++++++++++++++++++++++++++++++++*/
+ 
+  .arch-shape {
+    width: 25vw; /* 1/4 of the page width */
+    height: 100vh; /* Cover full viewport height */
+    background-color: #22324b; /* Light blue */
+    
+    /* Stick to the left side */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Create the vertical arch */
+    clip-path: ellipse(69% 122% at 2% 59%);
+
+    /* Push to the very back */
+    z-index: -1;
+}
+
+body.light .arch-shape {
+  width: 25vw; /* 1/4 of the page width */
+  height: 100vh; /* Cover full viewport height */
+  background-color: #ffffff; /* Light blue */
   
+  /* Stick to the left side */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Create the vertical arch */
+  clip-path: ellipse(69% 122% at 2% 59%);
+
+  /* Push to the very back */
+  z-index: -1;
+}
+
+/*=============================================
++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================
++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================*/
+
+
   main {
     max-width: 96%;
     margin-left: auto;
@@ -46,12 +96,12 @@
   
   /* ==========================
        THEME STYLES
-       ========================== */
+     ========================== */
   
   /* Light Theme */
   body.light {
     display: initial;
-    background-color: white;
+    background-color: rgba(150, 221, 203, 0.24);
     color: black;
     height: 100vh;
     width: 100%;
@@ -109,7 +159,7 @@
   
   /* ==========================
      NAVIGATION STYLES
-    ========================== */
+     ========================== */
   
 nav {
   width: 100%;
@@ -148,6 +198,7 @@ nav {
   
   .site-title {
     font-size: 1.5rem;
+    z-index: 1000;
   }
   
   /* Center Section */
@@ -165,6 +216,7 @@ nav {
     text-align: center;
     white-space: nowrap;
     width: 100%; /* Ensures it spans full width */
+    
   }
   
   @media (max-width: 768px) {
@@ -187,7 +239,7 @@ nav {
   
   /* ==========================
        THEME TOGGLE BUTTON STYLES
-       ========================== */
+     ========================== */
   
   #theme-toggle {
     color: rgba(0, 0, 0, 0.356);
@@ -217,7 +269,7 @@ nav {
   
   /* ==========================
        FOOTER STYLES
-       ========================== */
+     ========================== */
   
   .footer {
     padding: 20px;
@@ -297,5 +349,12 @@ nav {
     a.no-decoration {
       text-decoration: none !important;
       color: white;
+    }
+
+
+    .text-decoration {
+      text-decoration: underline; /* Or any decoration you prefer */
+      font-weight: bold; /* Optional: makes it stand out */
+      color: #906cdf; /* Optional: color adjustment */
     }
     

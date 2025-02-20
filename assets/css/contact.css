@@ -8,7 +8,7 @@ body {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 666px;
     margin: 0 auto;
     padding: 24px;
 }
@@ -16,32 +16,35 @@ body {
 /* Headings & Paragraphs */
 h2, h3 {
     text-align: center;
-    color: #333;
+    color: #b1b1b1;
+    ;
 }
 
 p {
     text-align: center;
-    color: #555;
+    color: #b1b1b1;
 }
 
 /* Contact Form Styling */
-.form-container {
-    background: white;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 24px;
-}
+
 
 label {
     font-weight: bold;
-    color: #333;
+    color: #b1b1b1;
+    display: block;
+    margin-bottom: 6px;
+}
+body.light label {    
+    font-weight: bold;
+    color: #000000;
     display: block;
     margin-bottom: 6px;
 }
 
+
 input, textarea {
-    width: 100%;
+    display: flex;
+    width: 96.3%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -99,7 +102,28 @@ button:hover {
     align-items: center;
 }
 
-/* Dark & Light Theme Styling */
-body.light a {
+
+
+
+
+
+/* Default link styling */
+a {
+    color: inherit; /* Takes the color from parent elements */
+    text-decoration: none; /* Optional */
+}
+
+/* Light mode specific */
+body.light .black-link {
+    color: black !important; /* Ensures the link is black */
+}
+
+/* Dark mode specific (optional if you want it different) */
+body.dark .black-link {
+    color: white !important;
+}
+
+/* Keep footer links black */
+.footer a {
     color: black !important;
 }
