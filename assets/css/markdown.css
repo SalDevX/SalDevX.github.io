@@ -78,17 +78,25 @@ body {
   overflow-x: auto;
   max-width: 90%;
   /* Prevents full width */
+
+  font-size: 18px;
 }
+
+/*=============================================*/
 
 /* Inline code */
 .markdown-body code {
-  background-color: rgba(255, 255, 255, 0.1);
+ /* background-color: rgba(255, 255, 255, 0.1);      */
   color: #ff79c6;
   /* Nice highlight color */
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9em;
 }
+
+
+
+
 
 /* Paragraphs */
 .markdown-body p {

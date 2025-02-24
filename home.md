@@ -73,6 +73,3 @@ title: SalDevX
 </h2>
 
 </div>
-
-
-
