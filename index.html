@@ -2,21 +2,41 @@
 <html lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/menu.css">
-  <link rel="stylesheet" href="/assets/css/markdown.css">
-  <script src="/assets/js/menu.js" defer></script>
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <head>
+    <!-- Favicon links -->
+    <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+  
+    <!-- Preload key CSS files to ensure they load faster -->
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="preload" href="/assets/css/menu.css" as="style">
+    <link rel="preload" href="/assets/css/markdown.css" as="style">
+  
+    <!-- Inline critical CSS for immediate rendering -->
+    <style>
+      /* Critical CSS for immediate page render */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  
+    <!-- Load the main CSS files -->
+    <link rel="stylesheet" href="/assets/css/main.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/menu.css" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/markdown.css" crossorigin="anonymous" media="print" onload="this.media='all'">
+  
+    <!-- Preload key JavaScript file -->
+    <script src="/assets/js/menu.js" defer crossorigin="anonymous"></script>
+
+  
+    <!-- SEO meta tags -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>SalDevX | SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="SalDevX" />
-<meta name="author" content="Salvatore Pesti" />
+<meta name="author" content="SalDevX" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites." />
 <meta property="og:description" content="SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites." />
@@ -27,10 +47,11 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="SalDevX" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Salvatore Pesti"},"description":"SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.","headline":"SalDevX","url":"http://localhost:4000/home"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"SalDevX"},"description":"SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.","headline":"SalDevX","url":"http://localhost:4000/home"}</script>
 <!-- End Jekyll SEO tag -->
 
-</head>
+  </head>
+  
 <title>SalDevX</title>
 <body>
   <div class="arch-shape"></div>
@@ -83,68 +104,51 @@
     </div>
     <br>
     <div class="slider-container">
-      <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-    <img class="image clip-frame"
-    src="/assets/images/Bali.jpg"
-    srcset="/assets/images/Bali-400w.jpg 400w, /assets/images/Bali-800w.jpg 800w, /assets/images/Bali-1200w.jpg 1200w"
-    sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-    draggable="false" />
-    <img class="image clip-frame" 
-         src="/assets/images/Thailand.jpg" 
-         alt="Thailand"
-         srcset="/assets/images/Thailand-400w.jpg 400w,
-                 /assets/images/Thailand-800w.jpg 800w,
-                 /assets/images/Thailand-1200w.jpg 1200w"
-         sizes="(max-width: 600px) 400px,
-                (max-width: 1200px) 800px,
-                1200px" 
-         draggable="false" />
-    <img class="image clip-frame" 
-         src="/assets/images/Fiji.jpg" 
-         alt="Fiji"
-         srcset="/assets/images/Fiji-400w.jpg 400w,
-                 /assets/images/Fiji-800w.jpg 800w,
-                 /assets/images/Fiji-1200w.jpg 1200w"
-         sizes="(max-width: 600px) 400px,
-                (max-width: 1200px) 800px,
-                1200px" 
-         draggable="false" />
-    <img class="image clip-frame" 
-         src="/assets/images/Sumba.jpg" 
-         alt="Sumba"
-         srcset="/assets/images/Sumba-400w.jpg 400w,
-                 /assets/images/Sumba-800w.jpg 800w,
-                 /assets/images/Sumba-1200w.jpg 1200w"
-         sizes="(max-width: 600px) 400px,
-                (max-width: 1200px) 800px,
-                1200px" 
-         draggable="false" />
-    <img class="image clip-frame" 
-         src="/assets/images/Tulum.jpg" 
-         alt="Tulum"
-         srcset="/assets/images/Tulum-400w.jpg 400w,
-                 /assets/images/Tulum-800w.jpg 800w,
-                 /assets/images/Tulum-1200w.jpg 1200w"
-         sizes="(max-width: 600px) 400px,
-                (max-width: 1200px) 800px,
-                1200px" 
-         draggable="false" />
-    <img class="image clip-frame" 
-         src="/assets/images/Hawaii.jpg" 
-         alt="Hawaii"
-         srcset="/assets/images/Hawaii-400w.jpg 400w,
-                 /assets/images/Hawaii-800w.jpg 800w,
-                 /assets/images/Hawaii-1200w.jpg 1200w"
-         sizes="(max-width: 600px) 400px,
-                (max-width: 1200px) 800px,
-                1200px" 
-         draggable="false" />
-</div>
+      <div id="image-track" class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img class="image clip-frame" src="/assets/images/Bali.jpg" 
+             srcset="/assets/images/Bali-400w.jpg 400w, /assets/images/Bali-800w.jpg 800w, /assets/images/Bali-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+        
+        <img class="image clip-frame" src="/assets/images/Thailand.jpg" alt="Thailand"
+             srcset="/assets/images/Thailand-400w.jpg 400w, /assets/images/Thailand-800w.jpg 800w, /assets/images/Thailand-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+        
+        <img class="image clip-frame" src="/assets/images/Fiji.jpg" alt="Fiji"
+             srcset="/assets/images/Fiji-400w.jpg 400w, /assets/images/Fiji-800w.jpg 800w, /assets/images/Fiji-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+        
+        <img class="image clip-frame" src="/assets/images/Sumba.jpg" alt="Sumba"
+             srcset="/assets/images/Sumba-400w.jpg 400w, /assets/images/Sumba-800w.jpg 800w, /assets/images/Sumba-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+        
+        <img class="image clip-frame" src="/assets/images/Tulum.jpg" alt="Tulum"
+             srcset="/assets/images/Tulum-400w.jpg 400w, /assets/images/Tulum-800w.jpg 800w, /assets/images/Tulum-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+        
+        <img class="image clip-frame" src="/assets/images/Hawaii.jpg" alt="Hawaii"
+             srcset="/assets/images/Hawaii-400w.jpg 400w, /assets/images/Hawaii-800w.jpg 800w, /assets/images/Hawaii-1200w.jpg 1200w"
+             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+             draggable="false" crossorigin="anonymous" />
+    </div>
+    
 
     </div>
     <br>
-    <script src="/assets/js/slider.js"></script>
-    <link rel="stylesheet" href="/assets/css/slider.css">
+
+    <!-- Preload the critical CSS for slider -->
+<link rel="preload" href="/assets/css/slider.css" as="style" crossorigin="anonymous">
+
+<!-- Link to the slider CSS with crossorigin for security -->
+<link rel="stylesheet" href="/assets/css/slider.css" crossorigin="anonymous">
+
+<!-- Link to the slider JS with defer for non-blocking and crossorigin for security -->
+<script src="/assets/js/slider.js" defer crossorigin="anonymous"></script>
+
     
     <div class="markdown-body">
       <div style="text-align: center;">
@@ -208,7 +212,7 @@
                     </svg>
             </a>
 
-            <a href="https://x.com/SalvatorePesti" target="_blank" class="social-icon">
+            <a href="" target="_blank" class="social-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M14.2832 10.1623L23.2178 0H21.1006L13.3428 8.8239L7.1466 0H0L9.3698 13.3432L0 24H2.1174L10.31 14.6818L16.8536 24H24.0002L14.2832 10.1623ZM11.3832 13.4606L10.4338 12.132L2.8802 1.55953H6.1322L12.2282 10.0918L13.1776 11.4204L21.1016 22.5111H17.8496L11.3832 13.4606Z"

@@ -56,7 +56,7 @@
 
 title: "SalDevX"
 description: "SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites."
-author: "Salvatore Pesti"
+author: "SalDevX"
 url: "https://saldevx.github.io"
 permalink: /:title.html  # Optional: If you want to set the permalink format globally
 
