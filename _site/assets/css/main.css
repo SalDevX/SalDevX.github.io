@@ -35,21 +35,22 @@
  =======================================
  +++++++++++++++++++++++++++++++++++++++*/
  
-  .arch-shape {
-    width: 25vw; /* 1/4 of the page width */
-    height: 100vh; /* Cover full viewport height */
-    background-color: #22324b; /* Light blue */
-    
-    /* Stick to the left side */
-    position: fixed;
-    top: 0;
-    left: 0;
+ .arch-shape {
+  width: 300px; /* Fixed width */
+  min-width: 300px; /* Prevent shrinking */
+  height: 100vh; /* Keep full height */
+  background-color: #22324b;
+  
+  /* Stick to the left side */
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    /* Create the vertical arch */
-    clip-path: ellipse(69% 122% at 2% 59%);
+  /* Create the vertical arch */
+  clip-path: ellipse(69% 122% at 2% 59%);
 
-    /* Push to the very back */
-    z-index: -1;
+  /* Push to the very back */
+  z-index: -1;
 }
 
 body.light .arch-shape {

@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/test.css' | relative_url }}">
-  <script src="{{ site.baseurl }}/assets/js/menu.js" defer></script>
-  {% seo %}
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Favicon links -->
+    <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
+  
+    <!-- Preload key CSS files to ensure they load faster -->
+    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
+    <link rel="preload" href="{{ '/assets/css/menu.css' | relative_url }}" as="style">
+    <link rel="preload" href="{{ '/assets/css/markdown.css' | relative_url }}" as="style">
+  
+    <!-- Inline critical CSS for immediate rendering -->
+    <style>
+      /* White preloader that covers the screen */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #1a202c;
+        z-index: 9999;
+        transition: opacity 888ms;
+      }
+    </style>
+  
+    <!-- Load the main CSS files -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}" crossorigin="anonymous" media="print" onload="this.media='all'">
+  
+    <!-- Preload key JavaScript file -->
+    <script src="{{ site.baseurl }}/assets/js/menu.js" defer crossorigin="anonymous"></script>
+  
+    <!-- SEO meta tags -->
+    {% seo %}
+  
+    <!-- JavaScript to remove the preloader after load -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        setTimeout(() => preloader.remove(), 700); // Removes after fade-out
+      });
+    </script>
+  </head>
 <title>{{ page.title }}</title>
-<body></body>
+<body>
+  <div id="preloader"></div>
+<body>
   <div class="arch-shape"></div>
   <main class="main">
     {% include navbar.html %}    
