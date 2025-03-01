@@ -22,7 +22,7 @@ body {
 @media (max-width: 480px) {
   .markdown-body {
     max-width: 90%; /* Reduce width for small screens */
-    margin-top: 165px; /* Reduce top margin */
+    margin-top: 100px; /* Reduce top margin */
     font-size: 14px; /* Adjust text size */
     padding: 10px; /* Add some spacing inside */
   }

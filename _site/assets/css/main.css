@@ -227,15 +227,32 @@ nav {
   
   @media (max-width: 768px) {
     .page-title {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
   
-  @media (max-width: 480px) {
+
+
+  @media (max-width: 480px) { /* Targets small screens like iPhones */
     .page-title {
-      display: none; /* Hides the title on small screens */
+        transform: translateX(20%); /* Moves it slightly to the right */
     }
   }
+
+  .page-title-container {
+    position: relative;
+    left: 0%;
+    transform: translateX(-45%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Adjust for smaller screens (iPhone size) */
+@media (max-width: 480px) { /* Targets small screens like iPhones */
+    .page-title-container {
+        transform: translateX(-20%); /* Moves it slightly to the right */
+    }
+}
   
   /* Right Section */
   .nav-right {

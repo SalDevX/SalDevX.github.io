@@ -29,7 +29,7 @@ body {
 /* Adjust for smaller screens (iPhone size) */
 @media (max-width: 480px) { /* Targets small screens like iPhones */
     .page-title-container {
-        transform: translateX(-20%); /* Moves it slightly to the right */
+        transform: translateX(20%); /* Moves it slightly to the right */
     }
 }
 
