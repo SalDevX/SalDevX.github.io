@@ -81,6 +81,8 @@ body.light .arch-shape {
     max-width: 96%;
     margin-left: auto;
     margin-right: auto;
+    
+   
   }
   
   /* Typography */
@@ -211,6 +213,9 @@ nav {
     white-space: nowrap;
   }
   
+
+
+
   .page-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -358,4 +363,8 @@ nav {
       font-weight: bold; /* Optional: makes it stand out */
       color: #906cdf; /* Optional: color adjustment */
     }
+
+
+  
+
     

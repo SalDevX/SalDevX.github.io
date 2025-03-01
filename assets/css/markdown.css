@@ -1,7 +1,7 @@
 /* Ensure markdown body is always transparent */
 
 body {
-  display: flex;
+  display: grid;
   justify-content: center;   /* Horizontally center */
   align-items: center;       /* Vertically center */
   height: 100vh;             /* Full height */
@@ -9,17 +9,25 @@ body {
 }
 
 .markdown-body {
-  
   background-color: transparent !important;
-  max-width: 800px;
-  /* Adjust width as needed */
-  margin: 100px auto;
-  /* Center content */
+  max-width: 800px; /* Default width */
+  margin: 100px auto; /* Center content */
   padding: 0rem;
   line-height: 1.6;
   color: white;
-  /* Default text color (dark mode) */
+  margin-top: 200px; /* Adjust as needed */
 }
+
+/* Adjust for small screens (iPhones, etc.) */
+@media (max-width: 480px) {
+  .markdown-body {
+    max-width: 90%; /* Reduce width for small screens */
+    margin-top: 165px; /* Reduce top margin */
+    font-size: 14px; /* Adjust text size */
+    padding: 10px; /* Add some spacing inside */
+  }
+}
+
 
 /* Light mode */
 .light .markdown-body {

@@ -52,12 +52,43 @@
   <div id="preloader"></div>
   <div class="arch-shape"></div>
   <main class="main">
-    {% include navbar.html %}
-
+    <nav>
+      <div class="nav-left">
+        <h1 class="site-title">{{ site.title }}</h1>
+        <div class="menu-cover"></div> 
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__list__item"><a href="/home.html">Home</a></li>
+            <li class="menu__list__item"><a href="/about.html">About</a></li>
+            <li class="menu__list__item"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      
+        <button id="menu-toggle" class="menu-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+            <path
+              d="M480-400 40-640l440-240 440 240-440 240Zm0 160L63-467l84-46 333 182 333-182 84 46-417 227Zm0 160L63-307l84-46 333 182 333-182 84 46L480-80Zm0-411 273-149-273-149-273 149 273 149Zm0-149Z" />
+          </svg>
+        </button>
+        </div>
+      
+        <div class="page-title-container">
+        <h1>Contact Me</h1>
+    </div>
+    
+      <!-- Theme Toggle (no change needed here) -->
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-toggle">+</button>
+        <script src="/assets/js/theme-toggle.js"></script>
+      </div>
+      </nav>      
+ 
     </main>
-    <div>
+    <div style="height: 128px;"></div>
+    <div class="container">
       {{ content }}
     </div>
+    <div style="height: 150px;"></div>
   {% include footer.html %}
 </body>
 </html>

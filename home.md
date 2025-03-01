@@ -61,7 +61,7 @@ title: SalDevX
 
 
 <h1>
-  This web page layout is built from the ground up using only vanilla CSS for styling, JavaScript for drop-down menu animation, theme switch toggle, and gallery slider.
+  This web page layout is built from the ground up using vanilla CSS for styling, JavaScript for drop-down menu animation, theme switch toggle, and gallery slider.
 </h1>
 
 <h2>

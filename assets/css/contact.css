@@ -4,6 +4,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+     
+    
 }
 
 /* Container */
@@ -11,6 +13,24 @@ body {
     max-width: 666px;
     margin: 0 auto;
     padding: 24px;
+    
+    
+}
+
+
+.page-title-container {
+    position: relative;
+    left: 0%;
+    transform: translateX(-45%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Adjust for smaller screens (iPhone size) */
+@media (max-width: 480px) { /* Targets small screens like iPhones */
+    .page-title-container {
+        transform: translateX(-20%); /* Moves it slightly to the right */
+    }
 }
 
 /* Headings & Paragraphs */

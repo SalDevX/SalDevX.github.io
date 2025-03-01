@@ -3,8 +3,8 @@ layout: contact
 title: Contact
 ---
 <div class="container">
-    <h2>Contact Me</h2>
     <p>I'm always open to exciting opportunities, feedback, or just a friendly chat. Let's connect!</p>
+    <br><br><br>
     <div class="form">
         <form action="#" method="POST">
             <label for="first-name">First Name</label>

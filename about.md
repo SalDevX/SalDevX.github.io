@@ -3,13 +3,18 @@ layout: default
 title: About
 ---
 
-<div style="text-align: center;">
-<h1 class="text-3xl font-bold text-center" style="display: flow-root;">It all started because a Wi-Fi device issue.</h1>
-</div>
+
+
+
+
+
 
 <div class="markdown-body">
+<div style="text-align: center;">
+<h1 class="text-3xl font-bold text-center" style="display: flow-root;">It all started because a Wi-Fi device issue.</h1>
     <h2>Project Overview</h2>
     <p>This webpage project was created from scratch, manually coded in HTML, CSS, and JavaScript, and is hosted on GitHub. Its purpose is to showcase a structured approach to building a basic website without using website builders. It serves as a practical example for learning and understanding web development fundamentals.</p>
+</div>
 </div>
 
 1. **Web Standards** – Understand how the web works at a high level and the process for creating web technologies. *(Category: Web Standards & Semantics)* 
