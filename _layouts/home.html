@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
   
     <!-- Favicon links -->
     <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" crossorigin="anonymous">
@@ -11,49 +10,70 @@
     <link rel="apple-touch-icon" href="/favicon/apple-icon.png">
   
     <!-- Preload key CSS files to ensure they load faster -->
-    <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style">
-    <link rel="preload" href="{{ '/assets/css/menu.css' | relative_url }}" as="style">
-    <link rel="preload" href="{{ '/assets/css/markdown.css' | relative_url }}" as="style">
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="preload" href="/assets/css/menu.css" as="style">
+    <link rel="preload" href="/assets/css/markdown.css" as="style">
   
-    <!-- Inline critical CSS for immediate rendering -->
+    <!-- Theme and Preloader Styles -->
     <style>
-      /* White preloader that covers the screen */
+      /* Preloader */
       #preloader {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #1a202c;
+        background-color: var(--bg-color, #1a202c); /* Uses CSS variable */
         z-index: 9999;
-     
-        transition: opacity 0.8s ease-in;
+       
       }
-    
-  body { background-color: #1a202c; }
-
     </style>
+
+    <!-- Theme Initialization -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme") || "dark"; 
+        document.documentElement.classList.add(savedTheme);
+        document.documentElement.style.setProperty('--bg-color', savedTheme === "light" ? "rgba(150, 221, 203, 0.24)" : "#1a202c");
+      })();
+    </script>
   
     <!-- Load the main CSS files -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ '/assets/css/menu.css' | relative_url }}" crossorigin="anonymous" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="{{ '/assets/css/markdown.css' | relative_url }}" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/main.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/menu.css" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/markdown.css" crossorigin="anonymous" media="print" onload="this.media='all'">
   
     <!-- Preload key JavaScript file -->
-    <script src="{{ site.baseurl }}/assets/js/menu.js" defer crossorigin="anonymous"></script>
+    <script src="/assets/js/menu.js" defer crossorigin="anonymous"></script>
   
     <!-- SEO meta tags -->
-    {% seo %}
-  
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>SalDevX | Frontend Developer - Astro, JavaScript, Jekyll</title>
+    <meta name="generator" content="Jekyll v4.4.1">
+    <meta property="og:title" content="SalDevX">
+    <meta name="author" content="SalDevX">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.">
+    <meta property="og:description" content="SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.">
+    <link rel="canonical" href="https://saldevx.github.io/home">
+    <meta property="og:url" content="https://saldevx.github.io/home">
+    <meta property="og:site_name" content="SalDevX">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="SalDevX">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"SalDevX"},"description":"SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites.","headline":"SalDevX","url":"https://saldevx.github.io/home"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+
     <!-- JavaScript to remove the preloader after load -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("load", function () {
         const preloader = document.getElementById("preloader");
         preloader.style.opacity = "0";
-        setTimeout(() => preloader.remove(), 1000); // Removes after fade-out
+        setTimeout(() => preloader.remove(), 800); // Removes after fade-out
       });
     </script>
-
   </head>
 <title>{{ page.title }}</title>
 <body>
