@@ -5,8 +5,9 @@
 html, body {
   overflow-x: hidden; /* Hides horizontal overflow */
   width: 100vw; /* Ensures full viewport width */
-  background-color: #1a202c; /* Same as preloader */
 }
+
+
 
 html {
   scrollbar-gutter: stable; /* Keeps layout consistent */
