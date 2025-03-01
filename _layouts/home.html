@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
   
     <!-- Favicon links -->
     <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" crossorigin="anonymous">
@@ -25,7 +26,8 @@
         height: 100%;
         background-color: #1a202c;
         z-index: 9999;
-        transition: opacity 888ms;
+     
+        transition: opacity 0.8s ease-in;
       }
     </style>
   
@@ -45,7 +47,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const preloader = document.getElementById("preloader");
         preloader.style.opacity = "0";
-        setTimeout(() => preloader.remove(), 700); // Removes after fade-out
+        setTimeout(() => preloader.remove(), 1000); // Removes after fade-out
       });
     </script>
   </head>
@@ -57,11 +59,13 @@
     {% include navbar.html %}
     <br></br>
   </main>
+  <div style="height: 50px;"></div>
     <div class="markdown-body">
       <h2>Hello, World! 👋</h2>
       <p>This is my homepage, built with Jekyll.</p>
       <pre><code class="language-js">console.log("Hello, SalDevX!");</code></pre>
       <h2>Welcome to My Frontend Developer Portfolio</h2>
+      </div>
       
     </div>
     <br>

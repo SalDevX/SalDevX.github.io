@@ -1,149 +1,139 @@
 /* General Styling */
 body {
-    background-color: #f9fafb;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-     
-    
+  background-color: #f9fafb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Container */
 .container {
-    max-width: 666px;
-    margin: 0 auto;
-    padding: 24px;
-    
-    
+  max-width: 666px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-
 .page-title-container {
-    position: relative;
-    left: 0%;
-    transform: translateX(-45%);
-    text-align: center;
-    white-space: nowrap;
+  position: relative;
+  left: 0%;
+  transform: translateX(-45%);
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* Adjust for smaller screens (iPhone size) */
-@media (max-width: 480px) { /* Targets small screens like iPhones */
-    .page-title-container {
-        transform: translateX(20%); /* Moves it slightly to the right */
-    }
+@media (max-width: 480px) {
+  /* Targets small screens like iPhones */
+  .page-title-container {
+    transform: translateX(20%); /* Moves it slightly to the right */
+  }
 }
 
 /* Headings & Paragraphs */
-h2, h3 {
-    text-align: center;
-    color: #b1b1b1;
-    ;
+h2,
+h3 {
+  text-align: center;
+  color: #b1b1b1;
 }
 
 p {
-    text-align: center;
-    color: #b1b1b1;
+  text-align: center;
+  color: #b1b1b1;
 }
 
 /* Contact Form Styling */
 
-
 label {
-    font-weight: bold;
-    color: #b1b1b1;
-    display: block;
-    margin-bottom: 6px;
+  font-weight: bold;
+  color: #b1b1b1;
+  display: block;
+  margin-bottom: 6px;
 }
-body.light label {    
-    font-weight: bold;
-    color: #000000;
-    display: block;
-    margin-bottom: 6px;
+body.light label {
+  font-weight: bold;
+  color: #000000;
+  display: block;
+  margin-bottom: 6px;
 }
 
-
-input, textarea {
-    display: flex;
-    width: 96.3%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 12px;
-    font-size: 14px;
+input,
+textarea {
+  display: flex;
+  width: 96.3%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 button {
-    width: 100%;
-    background: #4f46e5;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+  width: 100%;
+  background: #4f46e5;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 button:hover {
-    background: #4338ca;
+  background: #4338ca;
 }
 
 /* Contact Info Styling */
 .contact-info {
-    background: white;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Links */
 .contact-info a {
-    color: #4f46e5;
-    text-decoration: none;
+  color: #4f46e5;
+  text-decoration: none;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Centering Contact Details */
 .contact-details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 
 /* Grid Layout for Contact Info */
 .contact-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
 }
-
-
-
-
-
 
 /* Default link styling */
 a {
-    color: inherit; /* Takes the color from parent elements */
-    text-decoration: none; /* Optional */
+  color: inherit; /* Takes the color from parent elements */
+  text-decoration: none; /* Optional */
 }
 
 /* Light mode specific */
 body.light .black-link {
-    color: black !important; /* Ensures the link is black */
+  color: black !important; /* Ensures the link is black */
 }
 
 /* Dark mode specific (optional if you want it different) */
 body.dark .black-link {
-    color: white !important;
+  color: white !important;
 }
 
 /* Keep footer links black */
 .footer a {
-    color: black !important;
+  color: black !important;
 }

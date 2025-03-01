@@ -2,10 +2,10 @@
 
 body {
   display: grid;
-  justify-content: center;   /* Horizontally center */
-  align-items: center;       /* Vertically center */
-  height: 100vh;             /* Full height */
-  margin: 0;                 /* Remove default body margin */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Full height */
+  margin: 0; /* Remove default body margin */
 }
 
 .markdown-body {
@@ -15,7 +15,7 @@ body {
   padding: 0rem;
   line-height: 1.6;
   color: white;
-  margin-top: 200px; /* Adjust as needed */
+  margin-top: 150px; /* Adjust as needed */
 }
 
 /* Adjust for small screens (iPhones, etc.) */
@@ -27,7 +27,6 @@ body {
     padding: 10px; /* Add some spacing inside */
   }
 }
-
 
 /* Light mode */
 .light .markdown-body {
@@ -94,17 +93,13 @@ body {
 
 /* Inline code */
 .markdown-body code {
- /* background-color: rgba(255, 255, 255, 0.1);      */
+  /* background-color: rgba(255, 255, 255, 0.1);      */
   color: #ff79c6;
   /* Nice highlight color */
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9em;
 }
-
-
-
-
 
 /* Paragraphs */
 .markdown-body p {
@@ -120,7 +115,6 @@ body {
   list-style-type: disc; /* Default bullet type for <ul>: disc, circle, square */
   color: inherit; /* Inherit text color from parent */
 }
-
 
 /* Links */
 .markdown-body a {
@@ -144,4 +138,3 @@ body {
 .markdown-body th {
   background-color: #333;
 }
-
