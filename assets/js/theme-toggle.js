@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.add("dark");
             body.classList.remove("light");
         }
+
+        // Force reflow/repaint
+        document.documentElement.style.display = "none";
+        setTimeout(() => {
+            document.documentElement.style.display = "";
+        }, 1);
     }
 
     // Get theme from localStorage, default to "dark"
@@ -24,5 +30,3 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem(storageKey, currentTheme);
     });
 });
-
-
