@@ -55,7 +55,7 @@
 #   - vendor/ruby/
 
 title: "SalDevX"
-description: "SalDevX is a frontend developer specializing in Astro, JavaScript, and Jekyll. Building fast, responsive websites."
+description: "SalDevX is a frontend developer specializing in crafting fast, responsive, and user-friendly websites with clean, efficient code."
 author: "SalDevX"
 url: "https://saldevx.github.io"
 permalink: /:title.html  # Optional: If you want to set the permalink format globally

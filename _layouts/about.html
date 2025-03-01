@@ -76,7 +76,6 @@
     </script>
   </head>
 
-  
 <title>{{ page.title }}</title>
 <body>
   <div id="preloader"></div>
@@ -102,8 +101,8 @@
         </button>
         </div>
       
-        <div class="page-title-container">
-        <h1>Contact Me</h1>
+        <div class="page-title-container2">
+        <h1>About</h1>
     </div>
     
       <!-- Theme Toggle (no change needed here) -->
@@ -111,14 +110,20 @@
         <button id="theme-toggle" class="theme-toggle">+</button>
         <script src="/assets/js/theme-toggle.js"></script>
       </div>
-      </nav>      
- 
-    </main>
-    <div style="height: 160px;"></div>
-    <div class="container">
+      </nav>
+       
+    <script src="/assets/js/slider.js"></script>
+    <link rel="stylesheet" href="/assets/css/slider.css">
+    
+   
+    <div class="markdown-body">
       {{ content }}
     </div>
-    <div style="height: 150px;"></div>
+ 
+  
+
+
+  </main>
   {% include footer.html %}
 </body>
 </html>
