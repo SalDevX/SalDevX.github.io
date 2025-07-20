@@ -27,7 +27,25 @@
         z-index: 9999;
        
       }
-    </style>
+
+
+@keyframes color-hover-blink {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: #008cff; /* simulate hover color */
+  }
+}
+
+.github-btn {
+  text-decoration: none;
+  color: white;
+  animation: color-hover-blink 1s infinite;
+}
+</style>
+
+
 
   
     <!-- Load the main CSS files -->

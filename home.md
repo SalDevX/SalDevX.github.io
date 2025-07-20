@@ -6,7 +6,8 @@ title: SalDevX
 <div style="text-align: center;">
 <h1 class="text-3xl font-bold text-center">Arch Linux Macbook Pro / Air</h1>
 
-<a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT" class="github-btn no-decoration" style="text-decoration: none;">
+<a href="https://github.com/SalDevX/archlinux-BCM4360_SUPPORT"
+   class="github-btn no-decoration">
   Archiso GitHub Repository
 </a>
 
