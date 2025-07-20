@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         startX = clientX;
         velocity = 0;
         lastClientX = clientX;
-        lastMoveTime = Date.now();
+        lastMoveTime = Date.now(); 
         cancelMomentum();
     }
 
@@ -77,6 +77,28 @@ document.addEventListener("DOMContentLoaded", function () {
             momentumID = null;
         }
     }
+
+        // Trackpad or Mouse Wheel Horizontal Scrolling
+    track.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaX) < 1) return; // Ignore vertical scrolls
+
+        e.preventDefault(); // Prevent page scrolling
+
+        let delta = e.deltaX;
+        let percentage = (delta / window.innerWidth) * 100;
+        let currentPercentage = parseFloat(track.dataset.prevPercentage) || 0;
+        let newPercentage = currentPercentage - percentage;
+
+        newPercentage = Math.min(Math.max(newPercentage, -36.8), 36.8);
+
+        track.style.transform = `translateX(${newPercentage}%)`;
+        track.dataset.prevPercentage = newPercentage;
+
+        images.forEach((img) => {
+            img.style.objectPosition = `${50 - newPercentage}% center`;
+        });
+    }, { passive: false });
+
 
     // Touch Events (Mobile)
     track.addEventListener("touchstart", (e) => {
